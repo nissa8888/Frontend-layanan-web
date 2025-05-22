@@ -240,7 +240,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 pt-3 pb-3">
-              <span>Copyright &copy; <a>KELOMPOK 6 TOKO ONLINE- </a> 2025</span>
+              <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
             </div>
           </div>
         </div>
