@@ -163,7 +163,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <footer class="sticky-footer bg-white" >
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
+                        <span>Copyright &copy; <a>KELOMPOK 6 TOKO ONLINE - </a> 2025</span>
                     </div>
                 </div>
             </footer>
