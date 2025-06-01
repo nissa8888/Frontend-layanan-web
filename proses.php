@@ -5,7 +5,6 @@
       <div class="modal-body pt-5 pb-5">
         <form role="form" method="post">
           <h2 class="mb-4">Buat Pesanan</h2>
-
           <!-- Detail Produk -->
           <div role="form" class="form-row">
             <div class="form-group col-md-6">

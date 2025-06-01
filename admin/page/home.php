@@ -6,6 +6,11 @@ if(!isset($_SESSION['username'])) {
 }
 require '../../db/koneksi.php';
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+
+// Query untuk mengambil jumlah notifikasi yang belum dibaca
+$sqli_notifikasi = "SELECT * FROM notifikasi WHERE status='baru'"; 
+$query_notifikasi = $koneksi->query($sqli_notifikasi);
+$jumlah_notifikasi = $query_notifikasi->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +68,14 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                 <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="notifikasi.php">
+                <i class="fas fa-bell"></i>
+                 <span>Notifikasi</span>
+                 <span class="badge badge-light"><?php echo $jumlah_notifikasi; ?></span> <!-- Badge untuk jumlah notifikasi baru -->
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="../logout.php">
                 <i class="fas fa-sign-out-alt"></i>
@@ -129,7 +142,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
                     <div class="row">
                         
-                        <!-- Pending Requests Card Example -->
+                        <!-- Produk Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
@@ -151,6 +164,27 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Notifikasi Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Notifikasi</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php
+                                                    echo $jumlah_notifikasi; // Menampilkan jumlah notifikasi
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-bell fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -160,10 +194,10 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white" >
+            <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <a>KELOMPOK 7 UNPER - </a> 2025</span>
+                        <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
                     </div>
                 </div>
             </footer>
