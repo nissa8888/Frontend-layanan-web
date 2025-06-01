@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: ../login.php");
     die();
 }
@@ -8,7 +8,7 @@ require '../../db/koneksi.php';
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
 // Query untuk mengambil jumlah notifikasi yang belum dibaca
-$sqli_notifikasi = "SELECT * FROM notifikasi WHERE status='baru'"; 
+$sqli_notifikasi = "SELECT * FROM notifikasi WHERE status='baru'";
 $query_notifikasi = $koneksi->query($sqli_notifikasi);
 $jumlah_notifikasi = $query_notifikasi->num_rows;
 ?>
@@ -65,20 +65,20 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="produk.php">
-                <i class="fas fa-code"></i>
+                    <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="notifikasi.php">
-                <i class="fas fa-bell"></i>
-                 <span>Notifikasi</span>
-                 <span class="badge badge-light"><?php echo $jumlah_notifikasi; ?></span> <!-- Badge untuk jumlah notifikasi baru -->
+                    <i class="fas fa-bell"></i>
+                    <span>Notifikasi</span>
+                    <span class="badge badge-light">1</span> <!-- Badge untuk jumlah notifikasi baru -->
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="../logout.php">
-                <i class="fas fa-sign-out-alt"></i>
+                    <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
 
@@ -122,7 +122,7 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../logout.php" >
+                                <a class="dropdown-item" href="../logout.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -141,7 +141,7 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                     <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
 
                     <div class="row">
-                        
+
                         <!-- Produk Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
@@ -151,14 +151,14 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Produk</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
-                                                    $sqli = "SELECT * FROM produk";
-                                                    $query = $koneksi->query($sqli);
-                                                    echo $query->num_rows;
+                                                $sqli = "SELECT * FROM produk";
+                                                $query = $koneksi->query($sqli);
+                                                echo $query->num_rows;
                                                 ?>
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                        <i class="fas fa-code fa-2x text-gray-300"></i>
+                                            <i class="fas fa-code fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Notifikasi</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
-                                                    echo $jumlah_notifikasi; // Menampilkan jumlah notifikasi
+                                                echo $jumlah_notifikasi; // Menampilkan jumlah notifikasi
                                                 ?>
                                             </div>
                                         </div>
