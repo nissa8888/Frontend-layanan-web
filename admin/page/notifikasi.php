@@ -128,29 +128,15 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pelanggan</th>
+                                            <th>Alamat</th>
                                             <th>Produk</th>
                                             <th>Jumlah</th>
+                                            <th>Total Harga</th>
                                             <th>Waktu Dibuat</th>
-                                            <th>Status</th>
+                                            <th>Jenis Pembayaran</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                        $no = 1;
-                                        $sql = mysqli_query($koneksi, "SELECT * FROM notifikasi ORDER BY id DESC");
-                                        while ($data = mysqli_fetch_assoc($sql)) {
-                                        ?>
-                                            <tr>
-                                                <td><?= $no++; ?></td>
-                                                <td><?= htmlspecialchars($data['nama_pelanggan']); ?></td>
-                                                <td><?= htmlspecialchars($data['produk']); ?></td>
-                                                <td><?= $data['jumlah']; ?></td>
-                                                <td><?= $data['waktu_dibuat']; ?></td>
-                                                <td>
-                                                    <?= ($data['status'] == 'baru') ? '<span class="badge badge-warning">Belum Terbaca</span>' : '<span class="badge badge-success">Terbaca</span>'; ?>
-                                                </td>
-                                            </tr>
-                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
