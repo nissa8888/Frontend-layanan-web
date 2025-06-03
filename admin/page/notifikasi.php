@@ -56,7 +56,11 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                 <a class="nav-link" href="notifikasi.php">
                     <i class="fas fa-bell"></i>
                     <span>Notifikasi</span>
-                    <span class="badge badge-light">1</span> <!-- Badge untuk jumlah notifikasi baru -->
+                    <span class="badge badge-light"><?php
+                                                    $sqli = "SELECT * FROM produk";
+                                                    $query = $koneksi->query($sqli);
+                                                    echo $query->num_rows;
+                                                    ?></span> <!-- Badge untuk jumlah notifikasi baru -->
                 </a>
             </li>
 
@@ -127,16 +131,35 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Pelanggan</th>
+                                            <th>Nama Pembeli</th>
                                             <th>Alamat</th>
                                             <th>Produk</th>
                                             <th>Jumlah</th>
                                             <th>Total Harga</th>
-                                            <th>Waktu Dibuat</th>
+                                            <th>Foto</th>
                                             <th>Jenis Pembayaran</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $no = 1;
+                                        $sql = mysqli_query($koneksi, "SELECT * FROM notifikasi");
+                                        while ($data = mysqli_fetch_assoc($sql)) {
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $no++; ?></td>
+                                                <th><?php echo $data['nama_pembeli']; ?></th>
+                                                <td><?php echo $data['alamat']; ?></td>
+                                                <td><?php echo $data['produk']; ?></td>
+                                                <td><?php echo $data['jumlah']; ?></td>
+                                                <td>Rp. <?php echo $data['total_harga']; ?></td>
+                                                <td><img src="../../assets/produk/<?php echo $data['foto']; ?>" alt="<?php echo $data['foto']; ?>" class="img-thumbnail" width="100px"></td>
+                                                <td><?php echo $data['jenis_pembayaran']; ?></td>
+                                            </tr>
+                                        <?php
+                                            ini_set("display_errors", "Off");
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -174,7 +174,9 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Notifikasi</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
-                                                echo $jumlah_notifikasi; // Menampilkan jumlah notifikasi
+                                                $sqli = "SELECT * FROM notifikasi";
+                                                $query = $koneksi->query($sqli);
+                                                echo $query->num_rows;
                                                 ?>
                                             </div>
                                         </div>
