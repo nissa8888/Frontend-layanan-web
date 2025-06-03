@@ -72,7 +72,11 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
                 <a class="nav-link" href="notifikasi.php">
                     <i class="fas fa-bell"></i>
                     <span>Notifikasi</span>
-                    <span class="badge badge-light">1</span> <!-- Badge untuk jumlah notifikasi baru -->
+                    <span class="badge badge-light"><?php
+                                                    $sqli = "SELECT * FROM notifikasi";
+                                                    $query = $koneksi->query($sqli);
+                                                    echo $query->num_rows;
+                                                    ?></span> <!-- Badge untuk jumlah notifikasi baru -->
                 </a>
             </li>
 

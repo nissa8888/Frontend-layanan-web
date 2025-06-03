@@ -57,10 +57,10 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                     <i class="fas fa-bell"></i>
                     <span>Notifikasi</span>
                     <span class="badge badge-light"><?php
-                                                    $sqli = "SELECT * FROM produk";
+                                                    $sqli = "SELECT * FROM notifikasi";
                                                     $query = $koneksi->query($sqli);
                                                     echo $query->num_rows;
-                                                    ?></span> <!-- Badge untuk jumlah notifikasi baru -->
+                                                    ?></span>
                 </a>
             </li>
 
