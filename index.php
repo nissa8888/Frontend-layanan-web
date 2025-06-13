@@ -202,7 +202,7 @@
       </div>
     </section>
     <!------------- product ------------------->
-    <section id="produk" class="produk mt-5 mb-5">
+     <section id="produk" class="produk mt-5 mb-5">
       <div class="container">
         <div class="row">
           <h2>Our Product</h2>
