@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!---- font awesom --->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!------fonts--->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <!-- css style ----->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!----animation----->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!------favicon------>
-    <link rel="shortcut icon" href="">
-    <!---------------------------------------->
-    <title>Aerostreet</title>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!---- font awesom --->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!------fonts--->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <!-- css style ----->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!----animation----->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!------favicon------>
+  <link rel="shortcut icon" href="">
+  <!---------------------------------------->
+  <title>Aerostreet</title>
+</head>
 
   <body>
     <!------ navbar------->
@@ -202,7 +202,7 @@
       </div>
     </section>
     <!------------- product ------------------->
-     <section id="produk" class="produk mt-5 mb-5">
+    <section id="produk" class="produk mt-5 mb-5">
       <div class="container">
         <div class="row">
           <h2>Our Product</h2>
@@ -215,48 +215,41 @@
             ?>
           <div class="col-md-6 col-lg-3 mt-3">
             <div class="card">
-              <img class="card-img-top" src="./assets/produk/<?php echo $data['gambar']; ?>"
-                alt="<?php echo $data['gambar']; ?>">
+              <img class="card-img-top" src="./assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>">
               <div class="card-body">
                 <h4 class="card-title "><?php echo $data['nama']; ?></h4>
                 <h6 class="pb-3"><?php echo $data['harga']; ?></h6>
-                <button class="btn btn-primary btn-block btn-custom" data-toggle="modal"
-                  data-target="#pesan<?php echo $data['id']; ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  Beli</button>
+                <button class="btn btn-primary btn-block btn-custom" data-toggle="modal" data-target="#pesan<?php echo $data['id']; ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Beli</button>
               </div>
             </div>
           </div>
-          <?php
+        <?php
           include 'proses.php';
           ini_set("display_errors", "Off");
-          }
-          ?>
-        </div>
+        }
+        ?>
       </div>
-    </section>
-    <!------------- footer ------------------->
-    <div class="footer bg-custom">
-      <div class="card-footer text-white text-center ">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 pt-3 pb-3">
-              <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
-            </div>
+    </div>
+  </section>
+  <!------------- footer ------------------->
+  <div class="footer bg-custom">
+    <div class="card-footer text-white text-center ">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 pt-3 pb-3">
+            <span>Copyright &copy; <a>KELOMPOK 6 - </a> 2025</span>
           </div>
         </div>
       </div>
     </div>
-    <!------------- end footer ------------------->
+  </div>
+  <!------------- end footer ------------------->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/costum.js"></script>
-  </body>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/costum.js"></script>
+</body>
 
 </html>

@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: ../login.php");
     die();
 }
@@ -63,12 +63,24 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="produk.php">
-                <i class="fas fa-code"></i>
+                    <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="notifikasi.php">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifikasi</span>
+                    <span class="badge badge-light"><?php
+                                                    $sqli = "SELECT * FROM notifikasi";
+                                                    $query = $koneksi->query($sqli);
+                                                    echo $query->num_rows;
+                                                    ?></span> <!-- Badge untuk jumlah notifikasi baru -->
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="../logout.php">
-                <i class="fas fa-sign-out-alt"></i>
+                    <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
 
@@ -112,7 +124,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../logout.php" >
+                                <a class="dropdown-item" href="../logout.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -145,7 +157,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                         <span class="text">Tambah Produk</span>
                                     </button>
                                 </div>
-                            </div>                    
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -161,36 +173,36 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                         </tr>
                                     </thead>
                                     <tbody>
-                                            <?php 
-                                                $no = 1;
-                                                $sql = mysqli_query($koneksi, "SELECT * FROM produk");
-                                                while ($data = mysqli_fetch_assoc($sql)) {
-                                            ?>
-                                        <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <th><img src="../../assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>" class="img-thumbnail" width="100px"></th>
-                                            <td><?php echo $data['nama']; ?></td>
-                                            <td><?php echo $data['harga']; ?></td>
-                                            <td><?php echo $data['wa']; ?></td>
-                                            <td>
-                                                <a href="./include/edit-produk.php?id=<?php echo $data['id'];?>" class="btn btn-warning btn-icon-split btn-edit">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                    <span class="text">Edit</span>
-                                                </a>
-                                                <a href="./include/hapus-produk.php?id=<?php echo $data['id'];?>" class="btn btn-danger btn-icon-split btn-del">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                    <span class="text">Hapus</span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                            <?php 
-                                                ini_set("display_errors","Off");
-                                                } 
-                                            ?>
+                                        <?php
+                                        $no = 1;
+                                        $sql = mysqli_query($koneksi, "SELECT * FROM produk");
+                                        while ($data = mysqli_fetch_assoc($sql)) {
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $no++; ?></td>
+                                                <th><img src="../../assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>" class="img-thumbnail" width="100px"></th>
+                                                <td><?php echo $data['nama']; ?></td>
+                                                <td><?php echo $data['harga']; ?></td>
+                                                <td><?php echo $data['wa']; ?></td>
+                                                <td>
+                                                    <a href="./include/edit-produk.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-icon-split btn-edit">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-edit"></i>
+                                                        </span>
+                                                        <span class="text">Edit</span>
+                                                    </a>
+                                                    <a href="./include/hapus-produk.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-icon-split btn-del">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-trash"></i>
+                                                        </span>
+                                                        <span class="text">Hapus</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                            ini_set("display_errors", "Off");
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -207,7 +219,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
+                        <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
                     </div>
                 </div>
             </footer>
@@ -220,7 +232,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     <!-- End of Page Wrapper -->
 
     <?php include './include/modal.php' ?>
-    
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -246,8 +258,8 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     <script src="../js/demo/datatables-demo.js"></script>
 
     <?php
-        if(isset($_GET['sukses'])){
-            echo "<script>
+    if (isset($_GET['sukses'])) {
+        echo "<script>
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -256,8 +268,8 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                         timer: 1500
                     })
                 </script>";
-        }else if(isset($_GET['gagal'])){
-            echo "<script>
+    } else if (isset($_GET['gagal'])) {
+        echo "<script>
                     Swal.fire({
                         position: 'top-end',
                         icon: 'error',
@@ -266,28 +278,103 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                         timer: 1500
                     })
                 </script>";
-        }   
+    }
     ?>
 
     <script>
-    $('.btn-del').on('click',function(e) {
-        e.preventDefault();
-        const href = $(this).attr('href')
-        Swal.fire({
-            title: 'Hapus Produk?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'delete'
-        }).then((result) => {
-            if (result.value) {
-            document.location.href = href;
-            }
-        })
+        $('.btn-del').on('click', function(e) {
+            e.preventDefault();
+            const href = $(this).attr('href')
+            Swal.fire({
+                title: 'Hapus Produk?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'delete'
+            }).then((result) => {
+                if (result.value) {
+                    document.location.href = href;
+                }
+            })
         })
     </script>
 
 </body>
 
 </html>
+
+proses 2
+<!-- Modal contact -->
+<div class="modal fade bd-example-modal-lg" id="pesan<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body pt-5 pb-5">
+                <form role="form" method="post">
+                    <h2 class="mb-4">Buat Pesanan</h2>
+                    <div role="form" class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="barang">Nama Barang</label>
+                            <input type="text" class="form-control" name="barang" id="nama" value="<?php echo $data['nama']; ?>" readonly>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="wa">Whatsapp Penjual</label>
+                            <input type="text" class="form-control" name="wa" id="email" value="<?php echo $data['wa']; ?>" readonly>
+                        </div>
+                    </div>
+                    <label>Pesanan :</label>
+                    <div role="form" class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="pembeli" id="nama" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="alamat" id="subjek" placeholder="alamat" required>
+                    </div>
+                    <div class="form-group">
+                        <pre><textarea class="form-control" name="pesan" id="pesan" style="white-space: pre-line;" placeholder="pesan untuk penjual ..." row="1" required></textarea></pre>
+                    </div>
+                    <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+                    <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+if (isset($_POST['kirim'])) {
+    $barang = $_POST['barang'];
+    $pembeli = $_POST['pembeli'];
+    $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+    $pesan = $_POST['pesan'];
+
+    // Simpan ke tabel notifikasi
+    $query = mysqli_query($koneksi, "INSERT INTO notifikasi (nama_barang, nama_pembeli, email, alamat, pesan, status) VALUES ('$barang', '$pembeli', '$email', '$alamat', '$pesan', 'baru')");
+
+    if ($query) {
+        echo "<script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Pesanan Terkirim!',
+                    text: 'Pesanan Anda berhasil dikirim ke admin!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+              </script>";
+    } else {
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal!',
+                    text: 'Terjadi kesalahan saat mengirim pesanan.',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+              </script>";
+    }
+}
+?>

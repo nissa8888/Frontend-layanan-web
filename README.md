@@ -8,6 +8,13 @@
 2. bootstrap 4
 2. theme admin by sbadmin2 + sweetalert2
 
+## catatan
+besifat open source, bebas diubah. tapi jangan ngaku ngaku punya elu
+ada pertanyaan hub wa: 08759577774(Rizki Putra)
+
+### kredit
+Dev. Fajar Rivaldi Chan | Powered By Chanofficial
+
 ![image](https://user-images.githubusercontent.com/69442735/104312503-45db5200-5509-11eb-9be9-c8c6960893b8.png)
 ![image](https://user-images.githubusercontent.com/69442735/104312597-67d4d480-5509-11eb-99eb-4c38f5633b21.png)
 landing page
