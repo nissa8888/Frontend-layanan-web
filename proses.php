@@ -20,6 +20,14 @@
                 <option value="XL">XL</option>
               </select>
             </div>
+             <div class="form-group col-md-6">
+              <label for="harga">Harga</label>
+              <input type="text" class="form-control" name="harga" id="harga" value="<?php echo $data['harga']; ?>" readonly>
+            </div>
+             <div class="form-group col-md-6">
+              <label for="jumlah">Jumlah</label>
+              <input type="number" class="form-control" name="jumlah" id="jumlah" required>
+            </div>
           </div>
 
           <!-- Detail Pembeli -->
@@ -51,6 +59,9 @@
                 <option value="DANA">DANA</option>
                 <option value="COD">Cash on Delivery (COD)</option>
               </select>
+            </div>
+            <div class=" ">
+              <input type="text" class="form-control" name="total" id="total" value="<?php echo $data['harga']; ?>" readonly>
             </div>
           </div>
 
@@ -110,6 +121,7 @@ if (isset($_POST['kirim'])) {
   // Ambil data dari form
   $barang = $_POST['barang'];
   $size = $_POST['size'];
+  $harga = $_POST['harga'];
   $pembeli = $_POST['pembeli'];
   $email = $_POST['email'];
   $alamat = $_POST['alamat'];
@@ -165,8 +177,13 @@ if (isset($_POST['kirim'])) {
                 <option value="XL">XL</option>
               </select>
             </div>
+            <div class="form-group col-md-6">
+              <label for="harga">Harga</label>
+              <input type="text" class="form-control" name="harga" id="harga" value="<?php echo $data['harga']; ?>" readonly>
+            </div>
           </div>
 
+         
           <!-- Detail Pembeli -->
           <label>Pesanan :</label>
           <div role="form" class="form-row">
