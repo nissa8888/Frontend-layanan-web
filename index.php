@@ -24,111 +24,109 @@
   <title>Aerostreet</title>
 </head>
 
-  <body>
-    <!------ navbar------->
-    <section class="nav-navbar fixed-top  bg-light">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Aerostreet</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link" href="#home">Halaman <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#about">Tentang Kami</a>
-              <a class="nav-item nav-link" href="#produk">Produk</a>
-            </div>
+<body>
+  <!------ navbar------->
+  <section class="nav-navbar fixed-top  bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Aerostreet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="#home">Halaman <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#about">Tentang Kami</a>
+            <a class="nav-item nav-link" href="#produk">Produk</a>
           </div>
         </div>
-      </nav>
-    </section>
-    <!-------------endl navbar-------->
-    <!------------crousel----------->
-    <section id="home" class="awal">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="./assets/img/1.png" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="./assets/img/2.png" alt="Second slide">
-                </div>
+      </div>
+    </nav>
+  </section>
+  <!-------------endl navbar-------->
+  <!------------crousel----------->
+  <section id="home" class="awal">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="./assets/img/1.png" alt="First slide">
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="./assets/img/2.png" alt="Second slide">
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="row">
-                    <div class="col-md-8 col-9">
-                      <div class="card-body">
-                        Pria
-                      </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-8 col-9">
+                    <div class="card-body">
+                      Pria
                     </div>
-                    <div class="col-md-4 col-3">
-                      <img src="./assets/img/sepatu/2.png" class="img-fluid" alt="Responsive image">
-                    </div>
+                  </div>
+                  <div class="col-md-4 col-3">
+                    <img src="./assets/img/sepatu/2.png" class="img-fluid" alt="Responsive image">
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="row">
-                    <div class="col-md-8 col-9">
-                      <div class="card-body">
-                        Wanita
-                      </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-8 col-9">
+                    <div class="card-body">
+                      Wanita
                     </div>
-                    <div class="col-md-4 col-3">
-                      <img src="./assets/img/sepatu/3.png" class="img-fluid" alt="Responsive image">
-                    </div>
+                  </div>
+                  <div class="col-md-4 col-3">
+                    <img src="./assets/img/sepatu/3.png" class="img-fluid" alt="Responsive image">
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="row">
-                    <div class="col-md-8 col-9">
-                      <div class="card-body">
-                        Unisex
-                      </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-8 col-9">
+                    <div class="card-body">
+                      Unisex
                     </div>
-                    <div class="col-md-4 col-3">
-                      <img src="./assets/img/sepatu/4.png" class="img-fluid" alt="Responsive image">
-                    </div>
+                  </div>
+                  <div class="col-md-4 col-3">
+                    <img src="./assets/img/sepatu/4.png" class="img-fluid" alt="Responsive image">
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="row">
-                    <div class="col-md-8 col-9">
-                      <div class="card-body">
-                        Anak
-                      </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-8 col-9">
+                    <div class="card-body">
+                      Anak
                     </div>
-                    <div class="col-md-4 col-3">
-                      <img src="./assets/img/sepatu/1.png" class="img-fluid" alt="Responsive image">
-                    </div>
+                  </div>
+                  <div class="col-md-4 col-3">
+                    <img src="./assets/img/sepatu/1.png" class="img-fluid" alt="Responsive image">
                   </div>
                 </div>
               </div>
@@ -136,83 +134,80 @@
           </div>
         </div>
       </div>
-    </section>
-    <!--------------about----------->
-    <section id="about" class="about bg-white mt-5">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-9 sec-2 mt-5">
-            <h2>Tentang Kami</h2>
-            <p>Bisnis yang dimulai oleh Adhitya ini dimulai sejak tahun 2015, di mana saat itu ia melihat bahwa ada
-              kebutuhan sekunder berupa sepatu yang sekiranya dapat dijangkau oleh seluruh lapisan masyarakat. Seperti
-              slogan dari Aerostreet “Now everyone can buy a good shoes,” itulah yang menjadi harapan Adhitya bahwa
-              semua masyarakat Indonesia dari kalangan manapun, dapat membeli sepatu berkualitas dengan harga yang
-              terjangkau. <br></p>
-          </div>
-          <div class="col-lg-3">
-            <img src="assets/icon/Logo_Aerostreet.png" alt="logo" class="img-fluid">
-          </div>
+    </div>
+  </section>
+  <!--------------about----------->
+  <section id="about" class="about bg-white mt-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-9 sec-2 mt-5">
+          <h2>Tentang Kami</h2>
+          <p>Bisnis yang dimulai oleh Adhitya ini dimulai sejak tahun 2015, di mana saat itu ia melihat bahwa ada kebutuhan sekunder berupa sepatu yang sekiranya dapat dijangkau oleh seluruh lapisan masyarakat. Seperti slogan dari Aerostreet “Now everyone can buy a good shoes,” itulah yang menjadi harapan Adhitya bahwa semua masyarakat Indonesia dari kalangan manapun, dapat membeli sepatu berkualitas dengan harga yang terjangkau. <br></p>
+        </div>
+        <div class="col-lg-3">
+          <img src="assets/icon/Logo_Aerostreet.png" alt="logo" class="img-fluid">
         </div>
       </div>
-    </section>
-    <!------------- product ------------------->
-    <section class="brand mt-5 bg-custom">
-      <div class="container">
-        <div class="row text-center pb-5 pt-2">
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="./assets/icon/Logo/1.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
+    </div>
+  </section>
+  <!------------- product ------------------->
+  <section class="brand mt-5 bg-custom">
+    <div class="container">
+      <div class="row text-center pb-5 pt-2">
+        <div class="col-6 col-lg-3 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="./assets/icon/Logo/1.png" width="80px" class="img-fluid" alt="Responsive image">
             </div>
           </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="./assets/icon/Logo/2.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
+        </div>
+        <div class="col-6 col-lg-3 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="./assets/icon/Logo/2.png" width="80px" class="img-fluid" alt="Responsive image">
             </div>
           </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="./assets/icon/Logo/3.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
+        </div>
+        <div class="col-6 col-lg-3 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="./assets/icon/Logo/3.png" width="80px" class="img-fluid" alt="Responsive image">
             </div>
           </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="./assets/icon/Logo/4.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
+        </div>
+        <div class="col-6 col-lg-3 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="./assets/icon/Logo/4.png" width="80px" class="img-fluid" alt="Responsive image">
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!------------- product ------------------->
-    <section class="quote bg-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h1>Now everyone can buy a good shoes</h1>
-            <p>-Aerostreet.co.id</p>
-          </div>
+    </div>
+  </section>
+  <!------------- product ------------------->
+  <section class="quote bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>Now everyone can buy a good shoes</h1>
+          <p>-Aerostreet.co.id</p>
         </div>
       </div>
-    </section>
-    <!------------- product ------------------->
-    <section id="produk" class="produk mt-5 mb-5">
-      <div class="container">
-        <div class="row">
-          <h2>Our Product</h2>
-        </div>
-        <div class="row text-center">
-          <?php
-          require './db/koneksi.php';
-          $sql = mysqli_query($koneksi, "SELECT * FROM produk");
-          while ($data = mysqli_fetch_assoc($sql)) {
-            ?>
+    </div>
+  </section>
+  <!------------- product ------------------->
+  <section id="produk" class="produk mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <h2>Our Product</h2>
+      </div>
+      <div class="row text-center">
+        <?php
+        require './db/koneksi.php';
+        $sql = mysqli_query($koneksi, "SELECT * FROM produk");
+        while ($data = mysqli_fetch_assoc($sql)) {
+        ?>
           <div class="col-md-6 col-lg-3 mt-3">
             <div class="card">
               <img class="card-img-top" src="./assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>">
