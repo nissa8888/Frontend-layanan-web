@@ -304,7 +304,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
 </html>
 
-proses 2
+<!-- proses 2 -->
 <!-- Modal contact -->
 <div class="modal fade bd-example-modal-lg" id="pesan<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
