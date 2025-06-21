@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body pt-5 pb-5">
-        <form role="form" method="post" action="proses.php" class="container">
+        <form role="form" method="post" >
           <h2 class="mb-4">Buat Pesanan</h2>
 
           <!-- Detail Produk -->

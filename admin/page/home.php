@@ -203,7 +203,7 @@ $jumlah_notifikasi = $query_notifikasi->num_rows;
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
+                        <span>Copyright &copy; <a>KELOMPOK 6 - </a> 2025</span>
                     </div>
                 </div>
             </footer>

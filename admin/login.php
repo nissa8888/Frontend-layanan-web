@@ -69,7 +69,7 @@ if(isset($_SESSION['username'])) {
                                     </form>
                                     <hr>
                                     <div class="text-center pt-2">
-                                    <span>Copyright &copy; <a>KELOMPOK 3 UNPAM - </a> 2024</span>
+                                    <span>Copyright &copy; <a>KELOMPOK 6 - </a> 2025</span>
                                     </div>
                                 </div>
                             </div>

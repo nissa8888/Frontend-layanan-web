@@ -173,7 +173,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto text-center">
-                    <span>&copy; KELOMPOK 3 UNPAM - 2024</span>
+                    <span>Copyright &copy; <a>KELOMPOK 6 - </a> 2025</span>
                 </div>
             </footer>
         </div>
