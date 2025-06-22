@@ -261,7 +261,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     if (isset($_GET['sukses'])) {
         echo "<script>
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'top-center',
                         icon: 'success',
                         title: 'Berhasil',
                         showConfirmButton: false,
@@ -271,7 +271,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     } else if (isset($_GET['gagal'])) {
         echo "<script>
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'top-center',
                         icon: 'error',
                         title: 'Gagal',
                         showConfirmButton: false,

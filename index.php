@@ -245,6 +245,65 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/costum.js"></script>
+  <script>
+    const hargaInput = document.getElementById('harga');
+    const jumlahInput = document.getElementById('jumlah');
+    const totalInput = document.getElementById('total');
+
+    jumlahInput.addEventListener('input', function() {
+      const harga = parseInt(hargaInput.value) || 0;
+      const jumlah = parseInt(jumlahInput.value) || 0;
+      const total = harga * jumlah;
+      totalInput.value = total;
+    });
+  </script>
 </body>
 
 </html>
+
+<?php
+include './db/koneksi.php';
+
+if (!$koneksi) {
+  die("Koneksi ke database gagal: " . mysqli_connect_error());
+}
+
+if (isset($_POST['kirim'])) {
+
+  // Ambil data dari form
+  $barang = $_POST['barang'];
+  $size = $_POST['size'];
+  $jumlah = $_POST['jumlah'];
+  $harga = $_POST['harga'];
+  $pembeli = $_POST['pembeli'];
+  $email = $_POST['email'];
+  $alamat = $_POST['alamat'];
+  $pesan = $_POST['pesan'];
+  $metode_pembayaran = $_POST['metode_pembayaran'];
+  $foto = $_POST['gambar'];
+  $total_harga = $harga * $jumlah;
+
+  // Query
+  $query = "INSERT INTO notifikasi 
+    (nama_pembeli, alamat, produk, jumlah, total_harga, foto, jenis_pembayaran, ukuran, harga, pesan, email) 
+    VALUES 
+    ('$pembeli', '$alamat', '$barang', '$jumlah', '$total_harga', '$foto', '$metode_pembayaran', '$size', '$harga', '$pesan', '$email')";
+
+  if (mysqli_query($koneksi, $query)) {
+    echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+<script>
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Berhasil Membuat pesanan!',
+        showConfirmButton: false,
+        timer: 1500
+    });
+
+    setTimeout(function() {
+        window.location.href = '/Frontend-layanan-web/';
+    }, 1600);
+</script>";
+  }
+}
+?>
