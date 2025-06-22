@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jun 2025 pada 11.25
+-- Waktu pembuatan: 22 Jun 2025 pada 14.40
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -54,16 +54,63 @@ CREATE TABLE `notifikasi` (
   `jumlah` int(11) DEFAULT NULL,
   `total_harga` decimal(15,2) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
-  `jenis_pembayaran` varchar(50) DEFAULT NULL
+  `jenis_pembayaran` varchar(50) DEFAULT NULL,
+  `ukuran` int(11) DEFAULT NULL,
+  `harga` int(100) DEFAULT NULL,
+  `pesan` text DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `notifikasi`
 --
 
-INSERT INTO `notifikasi` (`id_notifikasi`, `nama_pembeli`, `alamat`, `produk`, `jumlah`, `total_harga`, `foto`, `jenis_pembayaran`) VALUES
-(1, 'Galang Riarulhaq', 'Jl. Merdeka No. 10, Jakarta', 'Laptop Asus ROG', 1, '25000000.00', '1.webp', 'COD'),
-(2, 'Galang Riarulhaq', 'Jl. Merdeka No. 10, Jakarta', 'Aerostreet 37-44 Hoops Low 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '250000.00', '2.webp', 'COD');
+INSERT INTO `notifikasi` (`id_notifikasi`, `nama_pembeli`, `alamat`, `produk`, `jumlah`, `total_harga`, `foto`, `jenis_pembayaran`, `ukuran`, `harga`, `pesan`, `email`) VALUES
+(1, 'Galang Riarulhaq', 'Jl. Merdeka No. 10, Jakarta', 'Laptop Asus ROG', 1, '25000000.00', '1.webp', 'COD', NULL, NULL, NULL, NULL),
+(2, 'Galang Riarulhaq', 'Jl. Merdeka No. 10, Jakarta', 'Aerostreet 37-44 Hoops Low 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '250000.00', '2.webp', 'COD', NULL, NULL, NULL, NULL),
+(3, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(4, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(5, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(6, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(7, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(8, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(9, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(10, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(11, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(12, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(13, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(14, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(15, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(16, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(17, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(18, 'putra', 'oke', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'putra@gmail.com'),
+(19, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(20, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(21, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(22, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(23, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(24, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(25, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(26, 'Rizki', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'oke', 'Robin1307@gmail.com'),
+(27, 'Ga', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(28, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(29, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(30, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(31, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(32, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(33, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(34, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(35, 'Ga', 'pesan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(36, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(37, 'galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(38, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'OVO', 0, 179900, 'pesan', 'galang@gmail.com'),
+(39, 'Ga', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'OVO', 0, 179900, 'pesan', 'galang@gmail.com'),
+(40, 'Ga', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(41, 'Galang', 'jaln', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(42, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(43, 'Galang', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(44, 'galng', 'jalan', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 1, '179900.00', '1.webp', 'COD', 0, 179900, 'pesan', 'galang@gmail.com'),
+(45, 'Galang', 'Jl. Garut', 'Aerostreet 37-44 Hoops High 2.0 Putih Hitam Putih - Sepatu Sneakers Casual', 2, '359800.00', '1.webp', 'COD', 0, 179900, 'okee', 'Robin1307@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -129,13 +176,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `notifikasi`
 --
 ALTER TABLE `notifikasi`
-  MODIFY `id_notifikasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_notifikasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
